@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>Add New Contac</h2>
+    <div class="form">
+        <mat-form-field>
+            <input [(ngModel)]="name" matInput placeholder="Name">
+        </mat-form-field>
+        <mat-form-field>
+            <input [(ngModel)]="email" matInput placeholder="Email Address">
+        </mat-form-field>
+        <mat-form-field>
+            <input [(ngModel)]="phone" matInput placeholder="Phone">
+        </mat-form-field>
+    </div>
+
+    <div class="actions">
+        <button mat-raised-button color="primary" (click)="save()">Save</button>
+        <button mat-raised-button color="danger" [routerLink]="['/']">Cancel</button>
+    </div>
+
+</div>
