@@ -1,12 +1,23 @@
 <mat-list>
-    @for (contact of contacts(); track $index) {
     <mat-list-item>
-        <h3 matListItemTitle>{{contact.name}}</h3>
-        <p matListItemLine>{{contact.email}} </p>
-        <p matListItemLine>{{contact.phone}}</p>
-        <button (click)="delete(contact)" matListItemLine mat-icon-button>
-            <mat-icon>delete</mat-icon>
-        </button> 
+        <div class="lista">
+            <h3 matListItemTitle>Name</h3>
+            <p matListItemLine>Email</p>
+            <p matListItemLine>Phone</p>
+            <p matListItemLine>Action</p> <!-- Cambié "Delete" a "Action" para dar más espacio -->
+        </div>
     </mat-list-item>
+
+    @for (contact of contacts(); track $index) {
+        <mat-list-item>
+            <div class="lista">
+                <h3 matListItemTitle>{{contact.name}}</h3>
+                <p matListItemLine>{{contact.email}}</p>
+                <p matListItemLine>{{contact.phone}}</p>
+                <button (click)="delete(contact)" mat-icon-button>
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </mat-list-item>
     }
 </mat-list>
